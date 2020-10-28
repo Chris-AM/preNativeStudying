@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "refreshin"
+    }
+  },
+  "defaultProject": "refreshin",
+  "cli": {
+    "analytics": false
+  }
 }
