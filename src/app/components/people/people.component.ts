@@ -1,14 +1,25 @@
-import { Component, Input } from '@angular/core';;
+import { Component, OnInit } from '@angular/core';
+import { PeopleService } from 'src/app/services/peopleService/people.service';
+
 
 @Component({
   selector: 'app-people',
   templateUrl: './people.component.html',
   styleUrls: ['./people.component.css']
 })
-export class PeopleComponent {
-  //@Input() and @Output() allow Angular to share data 
-  //between the parent context and child directives or 
-  //components.An @Input() property is writable while an 
-  //@Output() property is observable.
-  @Input() peopleList: String[]
+export class PeopleComponent implements OnInit{
+
+  peopleList: String[];
+  //private peopleService: PeopleService;
+
+  //here the service is injected
+  constructor(private ppleService: PeopleService) {
+    
+    //this.peopleList = ppleService.people;
+  }
+
+  ngOnInit() {
+    this.peopleList = this.ppleService.people;
+    
+  }
 }
