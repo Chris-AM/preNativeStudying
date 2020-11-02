@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { PeopleService } from './services/peopleService/people.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,9 @@ import { PeopleService } from './services/peopleService/people.service';
     AppRoutingModule
   ],
   //now you are telling angular that you are going to inject the service
-  providers: [PeopleService],
+  providers: [
+    PeopleService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
