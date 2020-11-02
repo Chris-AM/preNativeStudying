@@ -6,6 +6,7 @@ import { PeopleInputComponent } from './components/people-input/people-input.com
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { PeopleService } from './services/peopleService/people.service';
+import { HttpClientModule } from '@angular/common/http'; 
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { PeopleService } from './services/peopleService/people.service';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   //now you are telling angular that you are going to inject the service
   providers: [
